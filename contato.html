@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | Padaria do Bairro</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+    <header id="cabecalho-principal">
+        <a href="index.html" class="logo-link">
+            <img src="imagens/logo/Logo.jpg" alt="Logo da Padaria do Bairro" class="logo">
+        </a>
+        <button id="abrir-menu" aria-label="Abrir Menu Principal">☰</button> 
+
+        <div class="header-content">
+            <h1 id="titulo-com-tooltip">
+                Padaria do Bairro: O Sabor da Tradição
+            </h1>
+            <p>Desde 1980, fazendo o seu dia mais gostoso.</p>
+        </div>
+    </header>
+
+     <nav id="menu-lateral">
+        <button id="fechar-menu">X Fechar</button>
+        <ul class="nav-links">
+            <li><a href="index.html#sobre-nos">Sobre Nós</a></li>
+            <li><a href="index.html#cardapio">Cardápio</a></li>
+            <li><a href="index.html#galeria-produtos">Produtos</a></li>
+            <li><a href="index.html#localizacao-horarios-tabela">Horários</a></li>
+            <li><a href="index.html#contato">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <form action="/enviar-contato" method="POST">
+            <fieldset>
+                <legend>Informações de Contato</legend>
+                
+                <div>
+                    <label for="nome-contato">*Nome Completo:</label>
+                    <input type="text" id="nome-contato" name="nome-contato" required>
+                </div>
+                
+                <div>
+                    <label for="email-contato">*E-mail:</label>
+                    <input type="email" id="email-contato" name="email-contato" required>
+                </div>
+                
+                <div>
+                    <label for="telefone-contato">Telefone (opcional):</label>
+                    <input type="tel" id="telefone-contato" name="telefone-contato" pattern="\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}" placeholder="(99) 99999-9999">
+                </div>
+                
+                <div>
+                    <label for="assunto">Assunto:</label>
+                    <select id="assunto" name="assunto" required>
+                        <option value="">-- Selecione um Assunto --</option>
+                        <option value="info">ℹ️ Informações gerais</option>
+                        <option value="reclamacao">⚠️ Reclamação</option>
+                        <option value="sugestao">💡 Sugestão</option>
+                        <option value="elogio">🌟 Elogio</option>
+                        <option value="pedido">🎂 Pedido especial</option>
+                        <option value="outros">❓ Outros</option>
+                    </select>
+                </div>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>*Sua Mensagem</legend>
+                <div>
+                    <label for="mensagem">Mensagem Detalhada:</label>
+                    <textarea id="mensagem" name="mensagem" rows="6" required minlength="10" placeholder="Escreva a sua mensagem..."></textarea>
+                </div>
+            </fieldset>
+
+            <button type="submit">Enviar Mensagem ➡️</button>
+        </form>
+    </main>
+    
+    <footer>
+        <p><a href="index.html">Voltar para a Página Inicial</a></p>
+    </footer>
+
+    <a href="#cabecalho-principal" id="btn-topo" aria-label="Voltar ao topo da página">⬆️</a>
+    <a href="https://wa.me/1312345678" target="_blank" class="whatsapp-flutuante" aria-label="Fale conosco pelo WhatsApp">💬</a>
+    
+</body>
+<script src="js/script.js" defer></script>
+</html>

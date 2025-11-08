@@ -1,0 +1,24 @@
+/* ========================================= */
+/* CSS/RESET.CSS */
+/* Reset Básico para garantir consistência entre navegadores */
+/* ========================================= */
+
+* {
+    /* Garante que padding e border não aumentem o tamanho final dos elementos */
+    box-sizing: border-box;
+    /* Remove margens e paddings padrão de todos os elementos */
+    margin: 0;
+    padding: 0;
+}
+
+/* Regras adicionais comuns de normalização */
+html {
+    /* Ajuda a garantir um tamanho de fonte base consistente */
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    /* Previne margens visíveis se houver algum erro de herança */
+    min-height: 100vh;
+    scroll-behavior: smooth;
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos Especiais | Padaria do Bairro</title>
+
+    <link rel="stylesheet" href="css/style.css">
+   
+</head>
+<body>
+   <header id="cabecalho-principal">
+        <a href="index.html" class="logo-link">
+            <img src="imagens/logo/Logo.jpg" alt="Logo da Padaria do Bairro" class="logo">
+        </a>
+        
+        <button id="abrir-menu" aria-label="Abrir Menu Principal">☰</button> 
+
+        <div class="header-content">
+            <h1 id="titulo-com-tooltip">
+                Padaria do Bairro: O Sabor da Tradição
+            </h1>
+            <p>Desde 1980, fazendo o seu dia mais gostoso.</p>
+        </div>
+    </header>
+     <nav id="menu-lateral">
+        <button id="fechar-menu">X Fechar</button>
+        <ul class="nav-links">
+            <li><a href="index.html#sobre-nos">Sobre Nós</a></li>
+            <li><a href="index.html#cardapio">Cardápio</a></li>
+            <li><a href="index.html#galeria-produtos">Produtos</a></li>
+            <li><a href="index.html#localizacao-horarios-tabela">Horários</a></li>
+            <li><a href="index.html#contato">Contato</a></li>
+        </ul>
+    </nav>
+    <main>
+        <form action="/processar-pedido" method="POST">
+
+            <fieldset>
+                <legend>Seus Dados</legend>
+                
+                <div>
+                    <label for="nome-pedido">*Nome Completo:</label>
+                    <input type="text" id="nome-pedido" name="nome-pedido" required>
+                </div>
+                
+                <div>
+                    <label for="email-pedido">*E-mail:</label>
+                    <input type="email" id="email-pedido" name="email-pedido" required>
+                </div>
+                
+                <div>
+                    <label for="telefone-pedido">*Telefone:</label>
+                    <input type="tel" id="telefone-pedido" name="telefone-pedido" required pattern="\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}" placeholder="(99) 99999-9999">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Detalhes da Encomenda</legend>
+                
+                <p>Tipo de Produto:</p>
+                <div>
+                    <input type="radio" id="produto-bolo" name="tipo-produto" value="Bolo" required>
+                    <label for="produto-bolo">🍰 Bolo</label><br>
+                    
+                    <input type="radio" id="produto-torta" name="tipo-produto" value="Torta">
+                    <label for="produto-torta">🥧 Torta</label><br>
+                    
+                    <input type="radio" id="produto-salgado" name="tipo-produto" value="Salgados">
+                    <label for="produto-salgado">🥐 Salgados</label>
+                </div>
+                
+                <div>
+                    <label for="sabor">*Sabor/Recheio Principal:</label>
+                    <select id="sabor" name="sabor" required>
+                        <option value="">-- Escolha --</option>
+                        <option value="Chocolate">🍫 Chocolate</option>
+                        <option value="Morango">🍓 Morango</option>
+                        <option value="Baunilha">🥛 Baunilha</option>
+                        <option value="Coco">🥥 Coco</option>
+                        <option value="Queijo">🧀 Queijo (Salgado)</option>
+                    </select>
+                </div>
+
+                <p>*Tamanho:</p>
+                <div>
+                    <input type="radio" id="tamanho-peq" name="tamanho" value="Pequeno" required>
+                    <label for="tamanho-peq">Pequeno (Até 10 pessoas)</label><br>
+                    <input type="radio" id="tamanho-med" name="tamanho" value="Médio">
+                    <label for="tamanho-med">Médio (11-25 pessoas)</label><br>
+                    <input type="radio" id="tamanho-gde" name="tamanho" value="Grande">
+                    <label for="tamanho-gde">Grande (Acima de 25 pessoas)</label>
+                </div>
+
+                <div>
+                    <label for="data-entrega">📅 Data de Entrega Desejada:</label>
+                    <input type="date" id="data-entrega" name="data-entrega" required>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Informações Adicionais</legend>
+                
+                <div>
+                    <label for="observacoes">Observações Especiais (Decoração, alergias, etc.):</label>
+                    <textarea id="observacoes" name="observacoes" rows="4"></textarea>
+                </div>
+                
+                <div>
+                    <label for="orcamento">💰 Orçamento Máximo (R$):</label>
+                    <input type="number" id="orcamento" name="orcamento" min="20" step="0.50" placeholder="Ex: 150.00">
+                </div>
+            </fieldset>
+
+            <button type="submit">Solicitar Orçamento de Encomenda 🎂</button>
+        </form>
+    </main>
+
+    <footer>
+        <p><a href="index.html">Voltar para a Página Inicial</a></p>
+    </footer>
+
+    <a href="#cabecalho-principal" id="btn-topo" aria-label="Voltar ao topo da página">⬆️</a>
+    <a href="https://wa.me/1312345678" target="_blank" class="whatsapp-flutuante" aria-label="Fale conosco pelo WhatsApp">💬</a>
+    
+</body>
+    <script src="js/script.js" defer></script>
+</html>

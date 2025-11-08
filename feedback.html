@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback e Avaliação | Padaria do Bairro</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+    <header id="cabecalho-principal">
+        <a href="index.html" class="logo-link">
+            <img src="imagens/logo/Logo.jpg" alt="Logo da Padaria do Bairro" class="logo">
+        </a>
+        
+        <button id="abrir-menu" aria-label="Abrir Menu Principal">☰</button> 
+
+        <div class="header-content">
+            <h1 id="titulo-com-tooltip">
+                Padaria do Bairro: O Sabor da Tradição
+            </h1>
+            <p>Desde 1980, fazendo o seu dia mais gostoso.</p>
+        </div>
+    </header>
+    <nav id="menu-lateral">
+        <button id="fechar-menu">X Fechar</button>
+        <ul class="nav-links">
+            <li><a href="index.html#sobre-nos">Sobre Nós</a></li>
+            <li><a href="index.html#cardapio">Cardápio</a></li>
+            <li><a href="index.html#galeria-produtos">Produtos</a></li>
+            <li><a href="index.html#localizacao-horarios-tabela">Horários</a></li>
+            <li><a href="index.html#contato">Contato</a></li>
+        </ul>
+    </nav>
+    <main>
+        <form action="/enviar-feedback" method="POST">
+
+            <fieldset>
+                <legend>Identificação (Opcional)</legend>
+                <div>
+                    <label for="nome-feedback">Nome:</label>
+                    <input type="text" id="nome-feedback" name="nome-feedback">
+                </div>
+                
+                <div>
+                    <label for="email-feedback">E-mail:</label>
+                    <input type="email" id="email-feedback" name="email-feedback">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Detalhes da Avaliação</legend>
+                
+                <div>
+                    <label for="produto-avaliado">Produto/Serviço Avaliado:</label>
+                    <select id="produto-avaliado" name="produto-avaliado" required>
+                        <option value="">-- Selecione o Item --</option>
+                        <option value="Pães">🥖 Pães tradicionais</option>
+                        <option value="Doces">🍰 Doces e bolos</option>
+                        <option value="Salgados">🥐 Salgados</option>
+                        <option value="Atendimento">👥 Atendimento</option>
+                        <option value="Ambiente">🏠 Ambiente</option>
+                        <option value="Preços">💲 Preços</option>
+                    </select>
+                </div>
+
+                <p>Avaliação Geral (Obrigatório):</p>
+                <div>
+                    <input type="radio" id="aval-exc" name="avaliacao" value="Excelente" required>
+                    <label for="aval-exc">🌟 Excelente</label><br>
+                    
+                    <input type="radio" id="aval-bom" name="avaliacao" value="Bom">
+                    <label for="aval-bom">👍 Bom</label><br>
+                    
+                    <input type="radio" id="aval-reg" name="avaliacao" value="Regular">
+                    <label for="aval-reg">😐 Regular</label><br>
+                    
+                    <input type="radio" id="aval-ruim" name="avaliacao" value="Ruim">
+                    <label for="aval-ruim">👎 Ruim</label>
+                </div>
+
+                <div>
+                    <label for="comentarios">Comentários (Opcional):</label>
+                    <textarea id="comentarios" name="comentarios" rows="5" placeholder="Gostaríamos de saber mais sobre a sua experiência."></textarea>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Permissões</legend>
+                <div>
+                    <input type="checkbox" id="recomenda" name="recomenda" value="Sim">
+                    <label for="recomenda">👍 Recomendaria a Padaria do Bairro para amigos?</label>
+                </div>
+                
+                <div>
+                    <input type="checkbox" id="autoriza-pub" name="autoriza-pub" value="Sim">
+                    <label for="autoriza-pub">📰 Autoriza a publicação deste depoimento no nosso site?</label>
+                </div>
+            </fieldset>
+
+            <button type="submit">Enviar Feedback 💬</button>
+        </form>
+    </main>
+
+    <footer>
+        <p><a href="index.html">Voltar para a Página Inicial</a></p>
+    </footer>
+
+     <a href="#cabecalho-principal" id="btn-topo" aria-label="Voltar ao topo da página">⬆️</a>
+     <a href="https://wa.me/1312345678" target="_blank" class="whatsapp-flutuante" aria-label="Fale conosco pelo WhatsApp">💬</a>
+    
+</body>
+    <script src="js/script.js" defer></script>
+</html>
